@@ -1,1 +1,1 @@
-# sulon-stock-listing
+# suzlon-stock-listing
