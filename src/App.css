@@ -17,33 +17,53 @@ html, body, #root {
   vertical-align: middle;
   line-height: 50px;
   font-size: large;
+  position: absolute;
+  width: 100%;
 }
 
 .container {
   width: 100%;
-  height: calc(100% - 50px);
+  height: 100%;
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-.symbol-selector {
+.filter {
   border-bottom: 1px solid #aaaaaa;
-  padding: 10px 30px;
-  height: 40px;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: 50px;
+}
+.symbol-selector {
+  margin: 10px 30px;
+  height: 38px;
+}
+
+.app-wrapper {
+  position: relative;
+  top: 109px;
+  height: calc(100% - 109px);
+  width: 100%;
+  bottom: 0;
 }
 
 .symbol-holder {
-  max-width: 300px;
-  width: 200px;
+  position: absolute;
+  width: 230px;
   overflow-y: auto;
-  height: 100%;
   padding: 0;
-  vertical-align: top;
+  height: 100%;
+  border-right: 1px solid #eee;
 }
 
 .symbol-details {
+  height: calc(100% - 20px);
+  width: calc(100% - 251px);
+  position: absolute;
+  left: 230px;
   overflow-y: auto;
   vertical-align: top;
-  padding: 0 10px;
+  padding: 10px;
   border-left: 1px solid #aaaaaa;
 }

@@ -10,13 +10,14 @@ import { toggleSymbolMasterView,
 const PortfolioDetail = props => {
     const  { model, onClick, remove } = props;
     const cs = classNames({
-        mv: model.master
+        mv: model.master,
+        portfolio: true
     });
 
     return (<li className={cs}>
-        <a onClick={() => onClick(model)}>
+        <div onClick={() => onClick(model)}>
             {model.companyName} <small>({model.symbol})</small>
-        </a>
+        </div>
         <a className='remove-link' onClick={()=>remove(model)}>x</a>
     </li>);
 }
@@ -35,12 +36,12 @@ class Portfolio extends React.Component {
         var list = [];
 
         if(!symbols || Object.keys(symbols).length <= 0) {
-            list.push(<li key={1}>Add symbols from the above selector</li>);
-        } else {
-            for(let k in symbols) {
-                if(symbols.hasOwnProperty(k)){
-                    list.push(<PortfolioDetail key={k} remove={removeSymbol} onClick={toggleMaster} model={symbols[k]}/>);
-                }
+            return (<div style={{"marginTop": '15px'}}>Add symbols from the above selector</div>);
+        } 
+
+        for(let k in symbols) {
+            if(symbols.hasOwnProperty(k)){
+                list.push(<PortfolioDetail key={k} remove={removeSymbol} onClick={toggleMaster} model={symbols[k]}/>);
             }
         }
 
