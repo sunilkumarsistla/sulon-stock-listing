@@ -20,11 +20,11 @@ const MasterDetail = props => {
             <div>Close</div>
             <div>High</div>
             <div>Low</div>
-            <div>{model.stock.price}</div>
-            <div>{model.stock.open}</div>
-            <div>{model.stock.close}</div>
-            <div>{model.stock.high}</div>
-            <div>{model.stock.low}</div>
+            <div>$ {model.stock.price}</div>
+            <div>$ {model.stock.open}</div>
+            <div>$ {model.stock.close}</div>
+            <div>$ {model.stock.high}</div>
+            <div>$ {model.stock.low}</div>
         </div>
       </li>);
 }
