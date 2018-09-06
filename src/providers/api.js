@@ -19,8 +19,5 @@ export const getCompanyFromSymbol = symbol => {
         }, 
         logo: resp.data.logo.url,
     }));
-    lookup[symbol].then(x=>{
-        console.log(x);
-    })
     return lookup[symbol];
 }
