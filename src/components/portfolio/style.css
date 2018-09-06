@@ -1,0 +1,78 @@
+ul, ol {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+li {
+    line-height: 1.2em;
+    padding: 5px 8px;
+}
+
+li a:hover {
+    cursor: pointer;
+}
+
+a.remove-link {
+    color: #333333;
+    float: right;
+}
+
+li.mv {
+    background-color: #eeeeee;
+}
+
+li:not(.tile) + li:not(.tile) {
+    border-top: 1px solid #CCC;
+}
+
+/* a */
+ul {
+  list-style-type: none;
+}
+
+.tile img {
+  float: left;
+  margin: 0 15px 0 0;
+  max-height: 70px;
+}
+
+.tile {
+  padding: 10px;
+  overflow: auto;
+  background-color: #f8f8f8;
+  border: 1px solid #f0f0f0;
+  border-radius: 3px;
+  max-height: 80px;
+  text-align: left;
+  font-size: 13px;
+}
+
+.tile .company-name,
+.tile .company-details,
+.tile .stock-details {
+    margin-left: 80px;
+}
+
+.tile .company-name {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 auto 10px auto;
+}
+
+.tile .company-details {
+    display: none;
+    margin: 0 auto 10px auto;
+}
+.stock-details {
+    margin-left: 80px;
+    display: table;
+}
+
+.stock-details div {
+    border: none;
+    float: left;
+    width: 20%;
+    text-align: center;
+    margin-bottom: 8px;
+}
